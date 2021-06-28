@@ -34,7 +34,7 @@ AutoML's best model is a voting ensemble comprised of 6 models:
 The accuracy of the model is 0.916.
 
 ## Pipeline comparison
-**Compare the two models and their performance. What are the differences in accuracy? In architecture? If there was a difference, why do you think there was one?**
+**Compare the two models and their performance. What are the differences in accuracy? In architecture? If there was a difference, why do you think there was one?**  
 AutoML and the logistic regression has similar performance: 0.916 for the first and 0.909 for the second. 
 
 In terms of architecture, the processing of the categorical variables is different in AutoML where a label encoding and a count vectorizer are both applied. Moreover, a *MaxAbsScaler* or *SparseNormalizer* is done on all the features. Furthermore, AutoML uses a combination of 6 models instead of one. Overall, AutoML architecture is more complex.
@@ -43,8 +43,12 @@ In terms of architecture, the processing of the categorical variables is differe
 **What are some areas of improvement for future experiments? Why might these improvements help the model?**  
 The target variable has imbalanced classes. There are around 10 times more negative observations (y=0) than the positive ones (y=1). We could try different sampling techniques to create a balanced dataset such as upsample the minority class or downsample the majority one. It is also possible to give more weights to the positive observations by using algorithms that can take into account a weight parameter.
 
-![AutoML infrastructure](./automl_archi.PNG)
+![AutoML infrastructure](https://github.com/sannif/nd00333_AZMLND_Optimizing_a_Pipeline_in_Azure-Starter_Files/blob/7179db6da58143b85e1333b16080c90f13a4a6bb/images/automl_architecture.PNG)
 
 **Image of cluster marked for deletion**
-![Cluster deletion](./automl_archi.PNG)
+![Cluster deletion](https://github.com/sannif/nd00333_AZMLND_Optimizing_a_Pipeline_in_Azure-Starter_Files/blob/7179db6da58143b85e1333b16080c90f13a4a6bb/images/delete_cluster.PNG)
+
+**Image of Notebook VM marked for deletion**
+![Compute instance deletion](https://github.com/sannif/nd00333_AZMLND_Optimizing_a_Pipeline_in_Azure-Starter_Files/blob/7179db6da58143b85e1333b16080c90f13a4a6bb/images/notebook_delete.PNG)
+
 
