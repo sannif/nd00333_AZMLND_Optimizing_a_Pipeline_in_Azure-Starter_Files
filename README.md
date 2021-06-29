@@ -32,6 +32,10 @@ AutoML's best model is a voting ensemble comprised of 6 models:
 *  *MaxAbsScaler + XGBoostClassifier*
 * *MaxAbsScaler + LightGBM*  
 
+The *XGBoostClasssifier* models presented many hyperparameters: *booster, colsample_bytree, eta, gamma, max_depth, max_leaves, n_estimators, objective, reg_alpha, reg_lambda, subsample, tree_method, max_bin, grow_policy*. More details on each of the hyperparameters can be found [here](https://xgboost.readthedocs.io/en/latest/parameter.html). The 4 models have different values for those hyperparameters.  
+
+For the *LightGBM* model, AutoML generated one hyperparameter which is *min_data_in_leaf*. It helps to prevent over-fitting in a leaf-wise tree.  
+
 The accuracy of the model is 0.916.
 
 ## Pipeline comparison
